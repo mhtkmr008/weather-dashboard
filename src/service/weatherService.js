@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_KEY='c571255850f2f8c99f5c2be8f13fde30';
+/* eslint-disable no-unused-vars */
+const API_KEY = 'c571255850f2f8c99f5c2be8f13fde30';
+/* eslint-enable no-unused-vars */
 
 const WeatherService={
     getWeather(city)
