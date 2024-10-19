@@ -11,6 +11,10 @@
   .weather-component.lightblue {
     background-color: lightblue;
   }
+
+  .weather-component.Haze{
+    background-color: rgb(236, 205, 205);
+  }
   
   .weather-component.yellow {
     background-color: yellow;

@@ -20,9 +20,10 @@ const WeatherComponent=()=>{
                 if (weatherMain === "Rain" || weatherMain==="thunderstorm with light rain") {
                     setBackground('lightgray'); // Rainy background
                   } 
-                //   else if (weatherMain === "Clear") {
-                //     setBackground('yellow'); // Sunny background
-                //   } else if (weatherMain === "Snow") {
+                   else if (weatherMain === "haze") {
+                     setBackground('Haze'); // Sunny background
+                   }
+                // else if (weatherMain === "Snow") {
                 //     setBackground('lightblue'); // Snowy background
                 //   } 
                   else {
