@@ -17,13 +17,15 @@ const WeatherComponent=()=>{
                 const currentHour = new Date().getHours();
                 const weatherMain = response.data.weather[0].main;
 
-                if (weatherMain === "Rain") {
+                if (weatherMain === "Rain" || weatherMain==="thunderstorm with light rain") {
                     setBackground('lightgray'); // Rainy background
-                  } else if (weatherMain === "Clear") {
-                    setBackground('yellow'); // Sunny background
-                  } else if (weatherMain === "Snow") {
-                    setBackground('lightblue'); // Snowy background
-                  } else {
+                  } 
+                //   else if (weatherMain === "Clear") {
+                //     setBackground('yellow'); // Sunny background
+                //   } else if (weatherMain === "Snow") {
+                //     setBackground('lightblue'); // Snowy background
+                //   } 
+                  else {
                 if (currentHour >= 5 && currentHour < 6) 
                     {
                         // Early Morning
@@ -73,6 +75,10 @@ const WeatherComponent=()=>{
 
     const handleSearch=(e)=>{
         e.preventDefault();
+        const trimmedCity = city.trim(); // Trim any whitespace  <-- **Added**
+        if (trimmedCity) {  // Check if trimmed city is not empty  <-- **Added**
+            setCity(trimmedCity); // Update the city state
+        }
     };
 
     return(
